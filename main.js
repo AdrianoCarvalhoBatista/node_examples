@@ -1,3 +1,5 @@
+const fatorial = require('./fatorial');
+const argv = require('yargs').demandOption('num').argv
 console.log("Que sistema operacional está sendo executado!");
 
 //Arquitetura
@@ -13,14 +15,10 @@ console.log("Que sistema operacional está sendo executado!");
 // })
 
 //Funcao fatorial pegar numero por parametro Exemplo: node object-process 5
-const fatorial = (num) => {
-    if(num === 0){
-        return 1;
-    }
-    return num * fatorial(num - 1);
-};
 
-console.log(`Fatoral do numero passado por parametro é ${fatorial(process.argv[2])}`)
+const num = argv.num
+
+console.log(`Fatoral do numero passado por parametro é ${fatorial(num)}`)
 
 
 //Todos os argumentos ultilizados
