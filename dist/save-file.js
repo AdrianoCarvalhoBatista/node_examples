@@ -11,4 +11,6 @@ const argv = yargs
 fs.writeFile(argv.filename, argv.content, (err) => {
     if (err)
         throw err;
+    console.log(`Arquivo ${argv.filename} foi salvo com sucesso.`);
 });
+//# sourceMappingURL=save-file.js.map

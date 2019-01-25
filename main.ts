@@ -1,4 +1,4 @@
-import {fatorial} from './fatorial/start'
+import {fatorial} from './start'
 
 import * as argvs from 'yargs'
 
